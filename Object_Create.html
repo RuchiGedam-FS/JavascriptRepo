@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in JavaScript</title>
+</head>
+<body>
+    <p id=p1></p>
+      <p id=p2></p>
+      <p id=p3></p>
+      <p id=p4></p>
+      <script>
+          //using Object Literal
+          var employee = {};
+          employee['name'] = 'Ruchi';
+          
+          document.getElementById("p1").innerHTML=" Employee" + employee.name;
+          
+          //using Oject Literal Declare and Initialize
+          var employee = {
+              first_name : 'Ruchi', 
+              last_name : 'Gedam', 
+              age : 24 , 
+              height :'5ft 5 inches'};
+          document.getElementById("p2").innerHTML=" Employee " + employee.first_name + " " + employee.last_name + " " +  employee.age + " " + employee.height;
+
+            // using Object Contructor
+            var employee = new Object();
+            employee.employee_1 = "Ruchi";
+            employee.employee_2 = "Swati";
+            employee.employee_3 = "Anjali";
+            employee.employee_4 = "Priya";
+            employee.employee_5 = "Avinash";
+
+            document.getElementById("p3").innerHTML="Employees" + employee.employee_1 + " " + employee.employee_2 + " " + employee.employee_3 + " " + employee.employee_4 + " " + employee.employee_5;
+            
+            // using Factory Function
+            function college(){
+                return {
+                     name : 'SCSIT',
+                     course : 'MCA'                    
+                };
+            }
+             var student = college();
+
+            document.getElementById("p4").innerHTML= student.name + " " + student.course;
+            
+            //using Constructor Function 
+            function course(){
+                this.Ruchi = 'MCA';
+                this.Preet = 'M.Pharma';
+                this.Swati = 'MCA';
+                document.write("Ruchi=" + this.Ruchi+ " Preet =" + this.Preet + " Swati = " + this.Swati);
+            }
+            var student =new  course();
+            
+      </script>
+</body>
+</html>
+   
+   
+  
