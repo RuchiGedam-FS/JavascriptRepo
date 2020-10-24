@@ -7,7 +7,13 @@
 </head>
 <body>
     <script>
-   localStorage.setItem('test', 1);
+        var num = prompt("enter 1 for local storage and 2 for session storage");
+        
+        
+        //LOCAL STORAGE EXAMPLE
+        
+        if(num==1)
+   {localStorage.setItem('test', 1);
    alert( localStorage.getItem('test') ); // 1
 
    // set key
@@ -18,7 +24,17 @@ alert( localStorage.test ); // 2
 
 // remove key
 delete localStorage.test;
+   }
 
+
+   // SESSION STORAGE EXAMPLE
+
+   
+   else if(num == 2)
+   {
+    sessionStorage.setItem('test', 1);
+    alert( sessionStorage.getItem('test') ); // after refresh: 1
+   }
 
     </script>
 </body>
