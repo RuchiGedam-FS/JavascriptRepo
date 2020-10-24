@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call and Apply</title>
+</head>
+
+<body>
+    <p>In this example the fulllName method of person is <b>applied</b> on person1:</p>
+<p id="test"></p>
+<script>
+    var person = {
+      fullName: function(city, country) {
+        return this.firstName + " " + this.lastName + "," + city + "," + country;
+      }
+    }
+    var person1 = {
+      firstName:"Ruchi",
+      lastName: "Gedam"
+    }
+    var x = person.fullName.apply(person1, ["Indore", "India"]); 
+    document.getElementById("test").innerHTML = x; 
+    </script>
+</body>
+</html>
