@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empty an Array</title>
+</head>
+<body>
+        
+    <p id = "up"></p> 
+      
+    <button onclick="empty()">  
+        Click to Empty 
+    </button>  
+      
+    <p id = "down" style="color: blue"></p> 
+      
+    <!-- Script to set size of array to zero -->
+    <script>  
+        var arr = [1, 2, 3, 4, 5]; 
+        var up = document.getElementById("up"); 
+        up.innerHTML = arr; 
+        var down = document.getElementById("down"); 
+        down.innerHTML = "length of Array = " 
+                + arr.length; 
+         
+         //function to empty an array
+
+        function empty() { 
+            arr = []; 
+            down = document.getElementById("down"); 
+            down.innerHTML = "length of array = " 
+                    + arr.length; 
+        } 
+    </script>  
+</body>
+</html>
